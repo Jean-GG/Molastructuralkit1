@@ -1,0 +1,10 @@
+{
+  "id": "mecanica-19",
+  "topic": "Mecánica de Materiales",
+  "question": "¿Qué es el esfuerzo crítico de Euler? ",
+  "answerTitle": "Esfuerzo Crítico de Euler",
+  "answerDetail": " El esfuerzo crítico (σ_cr) es el esfuerzo promedio en la columna cuando alcanza la carga crítica de pandeo: σ_cr = P_cr / A = (π² × E) / (L/r)² ",
+  "videoId": "",
+  "imgPlaceholder": "mecanica-19-euler.jpg",
+  "nextQuestionId": "mecanica-20"
+}

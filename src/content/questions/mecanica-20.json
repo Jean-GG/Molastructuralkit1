@@ -1,0 +1,9 @@
+{
+  "id": "mecanica-20",
+  "topic": "Mecánica de Materiales",
+  "question": "¿Qué es el factor de seguridad en diseño de columnas?",
+  "answerTitle": "Carga Crítica de Euler",
+  "answerDetail": "En diseño de columnas, el factor de seguridad se aplica a la carga crítica para obtener la carga permisible: P_permisible = P_cr / FS. Los factores de seguridad típicos para columnas son mayores que para otros elementos (FS = 2.5 a 3.5) debido a la naturaleza súbita y catastrófica de la falla por pandeo. ",
+  "videoId": "",
+  "nextQuestionId": "analisis-01"
+}

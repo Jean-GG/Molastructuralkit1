@@ -1,0 +1,10 @@
+{
+  "id": "analisis-12",
+  "topic": "Análisis Estructural",
+  "question": "¿Cuál es el Segundo Teorema de Área-Momentos?",
+  "answerTitle": "2do Teorema Área-Momentos",
+  "answerDetail": "El Segundo Teorema establece que la distancia entre un punto de la curva elástica y la tangente trazada por otro punto es igual al momento de primer orden del área del diagrama M/EI respecto al primer punto. ",
+  "videoId": "",
+  "imgPlaceholder": "analisis-12.jpg",
+  "nextQuestionId": "avanzado-01"
+}

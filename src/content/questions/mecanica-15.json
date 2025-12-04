@@ -1,0 +1,9 @@
+{
+  "id": "mecanica-15",
+  "topic": "Mecánica de Materiales",
+  "question": "¿Qué es el pandeo de columnas y cuándo ocurre?",
+  "answerTitle": "Pandeo de Columnas",
+  "answerDetail": "El pandeo es un fenómeno de inestabilidad elástica que ocurre cuando una columna esbelta sometida a compresión axial se deforma lateralmente súbitamente al alcanzar una carga crítica. Es un modo de falla que depende de la geometría y las condiciones de apoyo.",
+  "videoId": "",
+  "nextQuestionId": "mecanica-16"
+}

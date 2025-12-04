@@ -1,0 +1,42 @@
+---
+import ImmersiveLayout from '../../layouts/ImmersiveLayout.astro';
+---
+
+<ImmersiveLayout title="Selección de Módulo">
+    <div class="text-center mb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Elige tu Ruta de Aprendizaje</h1>
+        <p class="text-slate-300 text-lg">Selecciona el módulo que deseas repasar hoy</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto w-full">
+        
+        <a href="/repaso/estatica-01" class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 p-1 hover:scale-[1.02] transition-transform shadow-xl hover:shadow-orange-500/20">
+            <div class="bg-slate-900/90 h-full w-full rounded-xl p-8 flex flex-col items-center justify-center group-hover:bg-slate-900/80 transition-colors">
+                <h2 class="text-2xl font-bold text-white mb-2 group-hover:text-orange-400">Estática</h2>
+                <p class="text-slate-400 text-sm text-center">Equilibrio de partículas, cuerpos rígidos y estructuras simples.</p>
+            </div>
+        </a>
+
+        <a href="/repaso/mecanica-01" class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-400 to-blue-500 p-1 hover:scale-[1.02] transition-transform shadow-xl hover:shadow-blue-500/20">
+            <div class="bg-slate-900/90 h-full w-full rounded-xl p-8 flex flex-col items-center justify-center group-hover:bg-slate-900/80 transition-colors">
+                <h2 class="text-2xl font-bold text-white mb-2 group-hover:text-blue-400">Mecánica de Materiales</h2>
+                <p class="text-slate-400 text-sm text-center">Esfuerzo, deformación, flexión y pandeo de columnas.</p>
+            </div>
+        </a>
+
+        <a href="/repaso/analisis-01" class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-rose-700 to-red-900 p-1 hover:scale-[1.02] transition-transform shadow-xl hover:shadow-rose-500/20">
+            <div class="bg-slate-900/90 h-full w-full rounded-xl p-8 flex flex-col items-center justify-center group-hover:bg-slate-900/80 transition-colors">
+                <h2 class="text-2xl font-bold text-white mb-2 group-hover:text-rose-400">Análisis Estructural I</h2>
+                <p class="text-slate-400 text-sm text-center">Métodos energéticos, viga conjugada y carga unitaria.</p>
+            </div>
+        </a>
+
+        <a href="/repaso/avanzado-01" class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-700 to-slate-700 p-1 hover:scale-[1.02] transition-transform shadow-xl hover:shadow-indigo-500/20">
+            <div class="bg-slate-900/90 h-full w-full rounded-xl p-8 flex flex-col items-center justify-center group-hover:bg-slate-900/80 transition-colors">
+                <h2 class="text-2xl font-bold text-white mb-2 group-hover:text-indigo-400">Análisis Avanzado</h2>
+                <p class="text-slate-400 text-sm text-center">Método de flexibilidades, matrices y estructuras hiperestáticas.</p>
+            </div>
+        </a>
+
+    </div>
+</ImmersiveLayout>

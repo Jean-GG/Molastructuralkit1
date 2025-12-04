@@ -1,0 +1,9 @@
+{
+  "id": "analisis-10",
+  "topic": "Análisis Estructural",
+  "question": "¿En qué consiste el método de doble integración?",
+  "answerTitle": "Doble integración",
+  "answerDetail": " El método de doble integración consiste en sustituir la ecuación del momento flexionante M(x) en la ecuación diferencial de la elástica, integrar una vez para obtener la ecuación de la pendiente θ, y luego integrar una segunda vez para obtener la ecuación de la deflexión Δ. Las constantes de integración se determinan aplicando las condiciones de frontera de los apoyos. ",
+  "videoId": "",
+  "nextQuestionId": "analisis-11"
+}

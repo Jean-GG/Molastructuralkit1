@@ -1,0 +1,10 @@
+{
+  "id": "estatica-06",
+  "topic": "Estática",
+  "question": "¿Qué es un momento de una fuerza y cómo se calcula?",
+  "answerTitle": "Momento (M = F × d)",
+  "answerDetail": "El momento de una fuerza respecto a un punto es la medida de la tendencia de esa fuerza a hacer rotar el cuerpo alrededor de ese punto. Se calcula como el producto de la magnitud de la fuerza por la distancia perpendicular desde el punto hasta la línea de acción de la fuerza: M = F × d donde d es el brazo de momento.",
+  "videoId": "",
+  "imgPlaceholder": "estatica-06-momento.jpg",
+  "nextQuestionId": "estatica-07"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "estatica-11",
+  "topic": "Estática",
+  "question": "¿Qué es una estructura estáticamente determinada y qué criterio se usa para identificarla?",
+  "answerTitle": "Estructura Determinada (m = 2n - 3)",
+  "answerDetail": "Una estructura estáticamente determinada es aquella en la que todas las fuerzas internas y reacciones externas pueden calcularse usando únicamente las ecuaciones de equilibrio estático. Para armaduras planas, se verifica con la ecuación: m = 2n - 3 donde m es el número de miembros y n el número de nudos o juntas.",
+  "videoId": "",
+  "imgPlaceholder": "estatica-11-armadura-plana.jpg",
+  "nextQuestionId": "estatica-12"
+}

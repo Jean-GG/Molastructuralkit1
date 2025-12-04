@@ -1,0 +1,9 @@
+{
+  "id": "mecanica-09",
+  "topic": "Mecánica de Materiales",
+  "question": "¿Qué establece la ecuación de la flexión o fórmula de Navier?",
+  "answerTitle": "Fórmula de Navier",
+  "answerDetail": "La ecuación de la flexión relaciona el esfuerzo normal en cualquier punto de una viga con el momento flector: σ/y = M/I = E/R. Esta ecuación también se expresa como: σ = M × y / I, donde y es la distancia desde el eje neutro e I es el momento de inercia.",
+  "videoId": "",
+  "nextQuestionId": "mecanica-10"
+}

@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import WikiLayout from '../../layouts/WikiLayout.astro';
+
+// Genera las rutas para cada archivo en content/wiki
+export async function getStaticPaths() {
+  const wikiEntries = await getCollection('wiki');
+  return wikiEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<WikiLayout title={entry.data.title}>
+    <article class="prose prose-slate prose-lg max-w-none">
+        {/* Encabezado del Artículo */}
+        <header class="mb-8 border-b border-slate-200 pb-8">
+            <span class="text-purple-600 font-bold text-sm uppercase tracking-wider">
+                {entry.data.category}
+            </span>
+            <h1 class="text-4xl font-extrabold text-slate-900 mt-2 mb-4">
+                {entry.data.title}
+            </h1>
+        </header>
+        
+        {/* Contenido Markdown Renderizado */}
+        <div class="markdown-content">
+            <Content />
+        </div>
+    </article>
+</WikiLayout>
+
+<style is:global>
+    /* Estilos básicos para que el Markdown se vea bien sin plugins extra */
+    .markdown-content h2 { @apply text-2xl font-bold text-slate-800 mt-10 mb-4; }
+    .markdown-content h3 { @apply text-xl font-semibold text-slate-700 mt-8 mb-3; }
+    .markdown-content p { @apply text-slate-600 leading-relaxed mb-4 text-justify; }
+    .markdown-content ul { @apply list-disc list-inside mb-6 text-slate-600 ml-4; }
+    .markdown-content strong { @apply text-slate-900 font-bold; }
+    .markdown-content blockquote { @apply border-l-4 border-purple-500 pl-4 italic text-slate-700 my-6 bg-purple-50 p-4 rounded-r-lg; }
+</style>

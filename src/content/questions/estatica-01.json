@@ -1,0 +1,10 @@
+{
+  "id": "estatica-01",
+  "topic": "Estática",
+  "question": "¿Cuáles son las condiciones necesarias para que una partícula esté en equilibrio?",
+  "answerTitle": "Suma de Fuerzas = Cero",
+  "answerDetail": "Para que una partícula esté en equilibrio, la resultante de todas las fuerzas que actúan sobre ella debe ser igual a cero. Esto se expresa matemáticamente como ΣF=0, o en forma de componentes: ΣFx=0, ΣFy=0 y ΣFz=0 en el espacio tridimensional.",
+  "videoId": "",
+  "imgPlaceholder": "estatica-01-equilibrio.jpg",
+  "nextQuestionId": "estatica-02"
+}

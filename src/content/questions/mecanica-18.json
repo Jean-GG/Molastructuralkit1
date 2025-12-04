@@ -1,0 +1,10 @@
+{
+  "id": "mecanica-18",
+  "topic": "Mecánica de Materiales",
+  "question": "¿Qué es la longitud efectiva de una columna? ",
+  "answerTitle": "Longitud efectiva",
+  "answerDetail": "La longitud efectiva (L_e) es la distancia entre puntos de inflexión en la forma de pandeo, que depende de las condiciones de apoyo en los extremos: L_e = K × L. Donde K es el factor de longitud efectiva: K = 0.5 para extremos empotrados, K = 0.7 para un extremo empotrado y otro articulado, K = 1.0 para extremos articulados, K = 2.0 para un extremo empotrado y otro libre. ",
+  "videoId": "",
+  "imgPlaceholder": "mecanica-18-longitud_efectiva.jpg",
+  "nextQuestionId": "mecanica-19"
+}

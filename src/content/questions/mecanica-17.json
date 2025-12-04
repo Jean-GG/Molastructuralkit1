@@ -1,0 +1,9 @@
+{
+  "id": "mecanica-17",
+  "topic": "Mecánica de Materiales",
+  "question": "¿Qué es la relación de esbeltez y cómo afecta al pandeo?",
+  "answerTitle": "Relacion de esbeltez",
+  "answerDetail": "La relación de esbeltez (λ) es un parámetro adimensional que caracteriza la susceptibilidad al pandeo: λ = L / r. Donde: L = longitud efectiva de la columna, r = radio de giro = √(I/A). A mayor esbeltez, menor es la carga crítica de pandeo.",
+  "videoId": "",
+  "nextQuestionId": "mecanica-18"
+}

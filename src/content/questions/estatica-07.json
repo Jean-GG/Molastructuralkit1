@@ -1,0 +1,10 @@
+{
+  "id": "estatica-07",
+  "topic": "Estática",
+  "question": "¿Cuál es la diferencia entre fuerzas internas y fuerzas externas en un cuerpo rígido?",
+  "answerTitle": "Externas vs Internas",
+  "answerDetail": "Las fuerzas externas son aquellas aplicadas por otros cuerpos sobre el cuerpo rígido en estudio, como cargas, reacciones de apoyos y peso propio. Las fuerzas internas son las que mantienen unidas las partículas del cuerpo y no aparecen en el diagrama de cuerpo libre porque se cancelan entre sí dentro del sistema.",
+  "videoId": "",
+  "imgPlaceholder": "estatica-07-fuerzas.jpg",
+  "nextQuestionId": "estatica-08"
+}

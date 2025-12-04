@@ -1,0 +1,9 @@
+{
+  "id": "avanzado-04",
+  "topic": "Análisis Estructural Avanzado",
+  "question": "¿Qué es el principio de compatibilidad y cómo se aplica?",
+  "answerTitle": "Principio de Compatibilidad",
+  "answerDetail": "El principio de compatibilidad establece que la deformación total en los puntos donde se liberaron las restricciones debe ser igual a cero (si originalmente no había desplazamiento). Matemáticamente: Δ_B = Δ'_B + δ_BB · R_By",
+  "videoId": "",
+  "nextQuestionId": "avanzado-05"
+}

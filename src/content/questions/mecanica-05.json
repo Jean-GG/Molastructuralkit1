@@ -1,0 +1,9 @@
+{
+  "id": "mecanica-05",
+  "topic": "Mecánica de Materiales",
+  "question": "¿Cómo se calcula el alargamiento total de una barra bajo carga axial?",
+  "answerTitle": "Alargamiento Total (δ)",
+  "answerDetail": "El alargamiento total (δ) de una barra de longitud L, área A, sometida a una fuerza axial P se calcula mediante: δ = (P × L) / (A × E). Esta ecuación combina la Ley de Hooke con la definición de deformación unitaria.",
+  "videoId": "",
+  "nextQuestionId": "mecanica-06"
+}

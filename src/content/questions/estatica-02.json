@@ -1,0 +1,10 @@
+{
+  "id": "estatica-02",
+  "topic": "Estática",
+  "question": "¿Qué es un diagrama de cuerpo libre y por qué es importante en el análisis de equilibrio de partículas?",
+  "answerTitle": "Diagrama de Cuerpo Libre (D.C.L.)",
+  "answerDetail": "Un diagrama de cuerpo libre es una representación gráfica que muestra la partícula aislada de su entorno, con todas las fuerzas externas que actúan sobre ella representadas mediante vectores. Es fundamental porque permite visualizar claramente todas las fuerzas involucradas y facilita la aplicación de las ecuaciones de equilibrio.",
+  "videoId": "",
+  "imgPlaceholder": "estatica-02-poleas.jpg",
+  "nextQuestionId": "estatica-03"
+}

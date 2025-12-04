@@ -1,0 +1,10 @@
+{
+  "id": "estatica-14",
+  "topic": "Estática",
+  "question": "¿Qué diferencia hay entre una armadura simple y una armadura compuesta?",
+  "answerTitle": "Simple vs Compuesta",
+  "answerDetail": "Una armadura simple se forma comenzando con un triángulo básico y agregando sucesivamente dos nuevos miembros y un nudo. Una armadura compuesta se forma conectando dos o más armaduras simples mediante juntas comunes, barras de conexión, o ambas. Las armaduras compuestas requieren análisis más complejos.",
+  "videoId": "",
+  "imgPlaceholder": "estatica-14-armadura-compuesta.jpg",
+  "nextQuestionId": "estatica-15"
+}

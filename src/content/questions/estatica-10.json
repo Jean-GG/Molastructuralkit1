@@ -1,0 +1,10 @@
+{
+  "id": "estatica-10",
+  "topic": "Estática",
+  "question": "¿Qué es un par de fuerzas y cuál es su efecto sobre un cuerpo rígido?",
+  "answerTitle": "Par de Fuerzas",
+  "answerDetail": "Un par de fuerzas consiste en dos fuerzas paralelas de igual magnitud, sentidos opuestos y líneas de acción diferentes. Su efecto es producir únicamente rotación sin traslación. El momento del par es constante e independiente del punto de referencia elegido, calculándose como M = F × d donde d es la distancia perpendicular entre las fuerzas.",
+  "videoId": "",
+  "imgPlaceholder": "estatica-10-par.jpg",
+  "nextQuestionId": "estatica-11"
+}

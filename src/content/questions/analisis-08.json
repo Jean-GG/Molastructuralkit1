@@ -1,0 +1,10 @@
+{
+  "id": "analisis-08",
+  "topic": "Análisis Estructural",
+  "question": "¿Cuál es la ecuación diferencial de la elástica y qué representa? ",
+  "answerTitle": "Ecuación diferencial de la elástica",
+  "answerDetail": "La ecuación diferencial de la elástica es:",
+  "videoId": "",
+  "imgPlaceholder": "analisis-08-viga.jpg",
+  "nextQuestionId": "analisis-09"
+}

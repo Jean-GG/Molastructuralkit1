@@ -1,0 +1,10 @@
+{
+  "id": "estatica-08",
+  "topic": "Estática",
+  "question": "¿Qué tipos de apoyos existen y qué reacciones generan?",
+  "answerTitle": "Rodillo, Pasador y Empotramiento",
+  "answerDetail": "Los principales tipos de apoyos son: (1) apoyo de rodillo, que proporciona una reacción perpendicular a la superficie (1 reacción); (2) apoyo de pasador o articulación, que proporciona dos componentes de reacción perpendiculares (2 reacciones); y (3) empotramiento, que proporciona dos componentes de fuerza y un momento (3 reacciones).",
+  "videoId": "",
+  "imgPlaceholder": "estatica-08-tipos-apoyos.jpg",
+  "nextQuestionId": "estatica-09"
+}

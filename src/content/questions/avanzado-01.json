@@ -1,0 +1,9 @@
+{
+  "id": "avanzado-01",
+  "topic": "Análisis Estructural Avanzado",
+  "question": "¿Qué es el método de flexibilidades y cuándo se aplica?",
+  "answerTitle": "Método de Flexibilidades",
+  "answerDetail": "El método de flexibilidades (o método de las fuerzas) es un procedimiento para analizar estructuras hiperestáticas. Se basa en liberar las restricciones redundantes de la estructura para convertirla en isostática, calcular las deformaciones producidas, y luego aplicar el principio de compatibilidad para determinar las fuerzas redundantes.",
+  "videoId": "",
+  "nextQuestionId": "avanzado-02"
+}

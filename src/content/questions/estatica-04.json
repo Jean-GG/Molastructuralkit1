@@ -1,0 +1,10 @@
+{
+  "id": "estatica-04",
+  "topic": "Estática",
+  "question": "¿Qué es el principio de transmisibilidad en el contexto del equilibrio de partículas?",
+  "answerTitle": "Principio de Transmisibilidad",
+  "answerDetail": "El principio de transmisibilidad establece que las condiciones de equilibrio o movimiento de un cuerpo rígido permanecerán inalteradas si una fuerza que actúa en un punto del cuerpo se reemplaza por una fuerza de igual magnitud y dirección, pero que actúa en un punto diferente, siempre que ambas fuerzas tengan la misma línea de acción.",
+  "videoId": "",
+  "imgPlaceholder": "estatica-04-transmisibilidad.jpg",
+  "nextQuestionId": "estatica-05"
+}
