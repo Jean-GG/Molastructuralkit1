@@ -1,9 +1,0 @@
-{
-  "id": "mecanica-10",
-  "topic": "Mecánica de Materiales",
-  "question": "¿Qué es el esfuerzo cortante en vigas y cómo se distribuye?",
-  "answerTitle": "Esfuerzo Cortante (τ)",
-  "answerDetail": "El esfuerzo cortante (τ) es el esfuerzo tangencial que se desarrolla en una sección transversal debido a la fuerza cortante. Se calcula mediante la fórmula de Jouravski: τ = (V × Q) / (I × b). El esfuerzo cortante en vigas varía parabólicamente a través de la sección, siendo máximo en el eje neutro y cero en las fibras extremas.",
-  "videoId": "",
-  "nextQuestionId": "mecanica-11"
-}

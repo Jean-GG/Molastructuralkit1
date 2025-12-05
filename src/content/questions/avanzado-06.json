@@ -1,8 +1,0 @@
-{
-  "id": "avanzado-06",
-  "topic": "Análisis Estructural Avanzado",
-  "question": "¿Qué diferencia hay entre la estructura isostática fundamental y las estructuras unitarias?",
-  "answerTitle": "Fundamental vs Unitarias",
-  "answerDetail": "Estructura isostática fundamental: Es la estructura original después de liberar las restricciones redundantes, sometida a las cargas reales. Estructuras unitarias: Son la misma estructura isostática pero sometida a una carga unitaria (valor = 1) en el lugar donde se liberó cada restricción.",
-  "videoId": ""
-}

@@ -1,9 +1,0 @@
-{
-  "id": "analisis-04",
-  "topic": "Análisis Estructural",
-  "question": "¿Qué representa la 'carga' en la viga conjugada?",
-  "answerTitle": "Representacion de la carga",
-  "answerDetail": "La 'carga' en la viga conjugada representa el diagrama M/EI de la viga real. El área bajo este diagrama corresponde a la resultante que se usa para calcular las reacciones(rotaciones), y esta resultante siempre está situada en el centroide del diagrama. ",
-  "videoId": "",
-  "nextQuestionId": "analisis-05"
-}

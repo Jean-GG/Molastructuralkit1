@@ -1,9 +1,0 @@
-{
-  "id": "estatica-15",
-  "topic": "Estática",
-  "question": "¿Qué son las fuerzas internas en vigas y cómo se representan?",
-  "answerTitle": "Fuerzas Internas (V, N, M)",
-  "answerDetail": "Las fuerzas internas en vigas son la fuerza cortante (V), la fuerza normal (N) y el momento flector (M) que actúan en cualquier sección transversal de la viga. Se determinan haciendo un corte imaginario en la viga y aplicando las ecuaciones de equilibrio a la sección resultante. Se representan mediante diagramas de fuerza cortante y momento flector.",
-  "videoId": "",
-  "nextQuestionId": "mecanica-01"
-}

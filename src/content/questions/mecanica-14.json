@@ -1,9 +1,0 @@
-{
-  "id": "mecanica-14",
-  "topic": "Mecánica de Materiales",
-  "question": "¿Qué diferencia existe entre vigas estáticamente determinadas e indeterminadas?",
-  "answerTitle": "Vigas estáticamente determinadas e indeterminadas",
-  "answerDetail": " Vigas estáticamente determinadas: Las reacciones y esfuerzos internos pueden calcularse únicamente con ecuaciones de equilibrio estático. • Vigas estáticamente indeterminadas: Requieren ecuaciones adicionales de compatibilidad de deformaciones además del equilibrio. 'Una viga es estáticamente indeterminada cuando el número de reacciones desconocidas excede el número de ecuaciones de equilibrio disponibles' (Hibbeler). ",
-  "videoId": "",
-  "nextQuestionId": "mecanica-15"
-}

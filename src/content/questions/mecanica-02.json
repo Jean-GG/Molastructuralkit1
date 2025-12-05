@@ -1,9 +1,0 @@
-{
-  "id": "mecanica-02",
-  "topic": "Mecánica de Materiales",
-  "question": "¿Qué establece la Ley de Hooke para materiales elásticos?",
-  "answerTitle": "Ley de Hooke (σ = E × ε)",
-  "answerDetail": "La Ley de Hooke establece que, dentro del rango elástico de un material, existe una relación lineal directamente proporcional entre el esfuerzo aplicado y la deformación resultante: σ = E × ε. Donde: E = módulo de elasticidad o módulo de Young (Pa), ε = deformación unitaria (adimensional).",
-  "videoId": "",
-  "nextQuestionId": "mecanica-03"
-}

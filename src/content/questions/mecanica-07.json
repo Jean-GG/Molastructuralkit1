@@ -1,9 +1,0 @@
-{
-  "id": "mecanica-07",
-  "topic": "Mecánica de Materiales",
-  "question": "¿Qué es el factor de seguridad en diseño estructural?",
-  "answerTitle": "Factor de Seguridad (FS)",
-  "answerDetail": "El factor de seguridad (FS) es la relación entre la resistencia última o de fluencia del material y el esfuerzo de trabajo permisible: FS = σ_fluencia / σ_trabajo. Valores típicos van de 1.5 a 3.0 dependiendo de la aplicación y las incertidumbres involucradas.",
-  "videoId": "",
-  "nextQuestionId": "mecanica-08"
-}

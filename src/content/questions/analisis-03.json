@@ -1,9 +1,0 @@
-{
-  "id": "analisis-03",
-  "topic": "Análisis Estructural",
-  "question": "¿Cuál es la fórmula para calcular deflexiones usando el método de la carga unitaria?",
-  "answerTitle": "Método de la Carga Unitaria",
-  "answerDetail": "La fórmula es: Δ = ∫ (M · m / EI) dx. Donde: M = ecuación del momento de la viga original, m = ecuación del momento de la viga unitaria (con carga = 1), L = longitud o intervalo de aplicación.",
-  "videoId": "",
-  "nextQuestionId": "analisis-04"
-}

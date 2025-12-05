@@ -3,15 +3,13 @@ import { defineCollection, z } from 'astro:content';
 
 // 1. Colección para el Módulo Interactivo (Preguntas)
 const questionsCollection = defineCollection({
-    type: 'data',
+    type: 'content',
     schema: z.object({
-        id: z.string(),
+        type: z.enum(['question', 'practice']).optional().default('question'),
         topic: z.string(),
-        question: z.string(),
-        answerTitle: z.string(),
-        answerDetail: z.string(),
+        question: z.string(), // La pregunta va en el frontmatter (encabezado)
+        answerTitle: z.string().optional(), // El título de la respuesta también
         videoId: z.string().optional(),
-        imgPlaceholder: z.string().optional(), // Nuevo campo para el nombre de la imagen
         nextQuestionId: z.string().optional(),
     }),
 });

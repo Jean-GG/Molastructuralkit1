@@ -29,7 +29,7 @@ const THEMES = {
     }
 };
 
-export default function QuestionCard({ questionData }) {
+export default function QuestionCard({ questionData, children }) {
     const [isRevealed, setIsRevealed] = useState(false);
     const containerRef = useRef(null);
     const answerRef = useRef(null);
@@ -62,8 +62,9 @@ export default function QuestionCard({ questionData }) {
     return (
         <div ref={containerRef} className="w-full max-w-3xl mx-auto">
 
-            {/* --- TARJETA DE PREGUNTA --- */}
+            {/* --- TARJETA DE PREGUNTA (Se queda igual) --- */}
             <div className={`question-content bg-gradient-to-br ${theme.gradient} border ${theme.border} p-8 rounded-2xl shadow-2xl mb-6 relative overflow-hidden`}>
+                {/* ... contenido de la pregunta (título, botones) igual que antes ... */}
                 <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-white rounded-full blur-3xl opacity-10"></div>
 
                 <span className={`${theme.text} font-bold tracking-wider text-sm uppercase mb-2 block`}>
@@ -73,26 +74,14 @@ export default function QuestionCard({ questionData }) {
                     {questionData.question}
                 </h2>
 
-                {/* --- ZONA DE BOTONES (Antes de revelar) --- */}
                 {!isRevealed && (
                     <div className="flex flex-col md:flex-row gap-4">
-
-                        {/* Botón 1: Ver Explicación (Principal) */}
-                        <button
-                            onClick={handleReveal}
-                            className={`flex-1 py-4 ${theme.button} text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2`}
-                        >
+                        <button onClick={handleReveal} className={`flex-1 py-4 ${theme.button} text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2`}>
                             Ver Explicación
                         </button>
-
-                        {/* Botón 2: Saltar Pregunta (Secundario) */}
-                        <a
-                            href={nextLink}
-                            className="flex-1 py-4 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm text-white font-semibold rounded-xl transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2"
-                        >
+                        <a href={nextLink} className="flex-1 py-4 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm text-white font-semibold rounded-xl transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2">
                             Siguiente Pregunta
                         </a>
-
                     </div>
                 )}
             </div>
@@ -101,37 +90,25 @@ export default function QuestionCard({ questionData }) {
             <div ref={answerRef} style={{ display: 'none' }}>
                 <div className="bg-slate-900/90 border border-slate-700 p-8 rounded-2xl backdrop-blur-md flex flex-col gap-6">
 
+                    {/* Título de la respuesta (Viene del Frontmatter) */}
                     <h3 className={`text-3xl md:text-4xl ${theme.text} font-extrabold mb-2 text-center border-b border-white/10 pb-4`}>
                         {questionData.answerTitle}
                     </h3>
 
-                    <p className="text-slate-300 leading-relaxed text-lg text-justify">
-                        {questionData.answerDetail}
-                    </p>
+                    {/* AQUÍ ESTÁ EL CAMBIO: Renderizamos el Markdown body aquí */}
+                    <div className="text-slate-300 leading-relaxed text-lg text-justify prose prose-invert max-w-none">
+                        {children}
+                    </div>
 
-                    {questionData.imgPlaceholder && (
-                        <div className="w-full h-48 md:h-72 border-2 border-dashed border-slate-600 rounded-xl flex flex-col items-center justify-center bg-slate-800/50 group hover:border-slate-400 transition-colors relative overflow-hidden">
-                            <img
-                                src={`/images/questions/${questionData.imgPlaceholder}`}
-                                alt="Esquema explicativo"
-                                className="absolute inset-0 w-full h-full object-contain z-10 bg-slate-900"
-                                onError={(e) => e.target.style.display = 'none'}
-                            />
-                            <div className="text-slate-400 text-center p-4 z-0">
-                                <p className="font-mono text-sm text-slate-500">Esperando imagen:</p>
-                                <p className="font-bold text-slate-300">{questionData.imgPlaceholder}</p>
-                            </div>
-                        </div>
-                    )}
-
+                    {/* Video (Si existe en frontmatter, se renderiza aquí) */}
                     {questionData.videoId && (
-                        <div className="aspect-video rounded-lg overflow-hidden shadow-lg border border-slate-700 bg-black">
+                        <div className="aspect-video rounded-lg overflow-hidden shadow-lg border border-slate-700 bg-black mt-4">
                             <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${questionData.videoId}`} title="Video" frameBorder="0" allowFullScreen></iframe>
                         </div>
                     )}
 
-                    {/* BOTÓN AL FINAL DE LA RESPUESTA (Flujo normal) */}
-                    <div className="flex justify-end pt-4 border-t border-slate-700/50">
+                    {/* Botones de navegación (Igual que antes) */}
+                    <div className="flex justify-end pt-4 border-t border-slate-700/50 mt-4">
                         {questionData.nextQuestionId ? (
                             <a href={`/repaso/${questionData.nextQuestionId}`} className="inline-flex items-center gap-2 px-8 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-full transition-all hover:scale-105 font-bold shadow-lg border border-slate-500">
                                 Siguiente

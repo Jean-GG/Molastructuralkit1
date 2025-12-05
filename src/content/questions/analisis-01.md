@@ -1,0 +1,9 @@
+---
+type: "question"
+topic: "Análisis Estructural"
+question: "¿En qué consiste el método de la viga conjugada?"
+answerTitle: "Método de la Viga Conjugada"
+nextQuestionId: "analisis-02"
+---
+
+El método de la viga conjugada consiste en "convertir" el diagrama de momentos flexionantes ($M/EI$) en la carga de una viga ficticia. Las reacciones calculadas mediante estática en esta viga conjugada equivalen a las rotaciones (pendientes), y los momentos flexionantes equivalen a las deflexiones de la viga real.

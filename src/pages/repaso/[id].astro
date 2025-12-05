@@ -3,34 +3,32 @@ import { getCollection } from 'astro:content';
 import ImmersiveLayout from '../../layouts/ImmersiveLayout.astro';
 import QuestionCard from '../../components/guided/QuestionCard';
 
-// 1. Generar las rutas estáticas para CADA pregunta que exista en la carpeta content
 export async function getStaticPaths() {
   const allQuestions = await getCollection('questions');
-  
   return allQuestions.map(entry => ({
-    params: { id: entry.data.id },
-    props: { question: entry.data },
+    params: { id: entry.slug }, // Usamos el slug (nombre del archivo) como ID
+    props: { entry },
   }));
 }
 
-// 2. Obtener los datos de la pregunta actual
-const { question } = Astro.props;
+const { entry } = Astro.props;
+// Esta función mágica convierte el Markdown a HTML/Componente
+const { Content } = await entry.render();
 ---
 
-<ImmersiveLayout title={`Repaso: ${question.topic}`}>
+<ImmersiveLayout title={`Repaso: ${entry.data.topic}`}>
     
-    {/* Barra de progreso superior (simple) */}
     <div className="absolute top-0 left-0 w-full p-6 flex justify-between text-slate-500 text-sm uppercase tracking-widest z-20">
         <span>Modo Interactivo</span>
-        <span>{question.topic}</span>
+        <span>{entry.data.topic}</span>
     </div>
 
-    {/* Cargamos la "Isla" de React 
-        client:load es IMPORTANTE: le dice a Astro que cargue el JS de React 
-        para que funcionen los botones y animaciones 
-    */}
     <div className="flex items-center justify-center min-h-screen">
-        <QuestionCard questionData={question} client:load />
+        {/* Pasamos los datos del encabezado como prop */}
+        <QuestionCard questionData={entry.data} client:load>
+            {/* Pasamos el contenido del Markdown como 'children' */}
+            <Content />
+        </QuestionCard>
     </div>
 
 </ImmersiveLayout>

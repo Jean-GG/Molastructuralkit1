@@ -1,9 +1,0 @@
-{
-  "id": "mecanica-04",
-  "topic": "Mecánica de Materiales",
-  "question": "¿Qué es el coeficiente de Poisson y qué representa?",
-  "answerTitle": "Coeficiente de Poisson (ν)",
-  "answerDetail": "El coeficiente de Poisson (ν) es una constante del material que relaciona la deformación lateral con la deformación axial cuando un elemento está sometido a carga axial: ν = -ε_lateral / ε_axial. Los valores típicos oscilan entre 0.25 y 0.35 para la mayoría de los metales.",
-  "videoId": "",
-  "nextQuestionId": "mecanica-05"
-}

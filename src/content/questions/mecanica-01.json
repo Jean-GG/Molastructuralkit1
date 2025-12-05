@@ -1,9 +1,0 @@
-{
-  "id": "mecanica-01",
-  "topic": "Mecánica de Materiales",
-  "question": "¿Qué es el esfuerzo normal y cómo se calcula?",
-  "answerTitle": "Esfuerzo Normal (σ)",
-  "answerDetail": "El esfuerzo normal (σ) es la intensidad de fuerza por unidad de área que actúa perpendicular a la sección transversal de un elemento estructural. Se calcula mediante la fórmula: σ = P/A. Donde: σ = esfuerzo normal (Pa o N/m²), P = carga axial aplicada (N), A = área de la sección transversal (m²).",
-  "videoId": "",
-  "nextQuestionId": "mecanica-02"
-}

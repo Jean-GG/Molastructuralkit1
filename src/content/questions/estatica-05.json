@@ -1,9 +1,0 @@
-{
-  "id": "estatica-05",
-  "topic": "Estática",
-  "question": "¿Cuáles son las condiciones de equilibrio para un cuerpo rígido?",
-  "answerTitle": "Equilibrio de Fuerzas y Momentos",
-  "answerDetail": "Un cuerpo rígido está en equilibrio cuando tanto la suma de todas las fuerzas externas como la suma de todos los momentos externos alrededor de cualquier punto son iguales a cero. Matemáticamente: ΣF=0 y ΣM=0. Esto previene tanto la traslación como la rotación del cuerpo.",
-  "videoId": "",
-  "nextQuestionId": "estatica-06"
-}
