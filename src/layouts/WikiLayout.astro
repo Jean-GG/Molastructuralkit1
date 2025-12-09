@@ -4,11 +4,10 @@
 const { title } = Astro.props;
 
 // --- CONFIGURACIÓN DEL MENÚ LATERAL ---
-// Aquí definimos manualmente los módulos y sus subtemas para tener control exacto
 const MENU_ITEMS = [
   {
     title: "Estática Fundamental",
-    slug: "estatica", // Debe coincidir con el nombre de tu archivo .md
+    slug: "estatica",
     subitems: [
       { label: "Equilibrio de la Partícula", anchor: "#1-equilibrio-de-la-partícula" },
       { label: "Equilibrio del Cuerpo Rígido", anchor: "#2-equilibrio-del-cuerpo-rígido" },
@@ -41,7 +40,6 @@ const MENU_ITEMS = [
   }
 ];
 
-// Detectar la ruta actual para saber qué menú dejar abierto
 const currentPath = Astro.url.pathname;
 ---
 
@@ -50,7 +48,7 @@ const currentPath = Astro.url.pathname;
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title} | Wiki Mola</title>
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -58,23 +56,27 @@ const currentPath = Astro.url.pathname;
 	</head>
 	<body class="bg-slate-50 text-slate-800 flex min-h-screen font-sans">
 		
-		<aside class="w-80 bg-white border-r border-slate-200 hidden md:flex flex-col fixed h-full z-20 shadow-sm">
+        <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden transition-opacity opacity-0"></div>
+
+		<aside id="wiki-sidebar" class="w-80 bg-white border-r border-slate-200 flex flex-col fixed inset-y-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none">
             
-            <div class="p-6 border-b border-slate-100">
-                <h1 class="font-bold text-xl text-slate-900 tracking-tight">Tesis<span class="text-purple-600">Wiki</span></h1>
-                <p class="text-xs text-slate-500 mt-1">Manual de Ingeniería Civil</p>
+            <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+                <div>
+                    <h1 class="font-bold text-xl text-slate-900 tracking-tight">Tesis<span class="text-purple-600">Wiki</span></h1>
+                    <p class="text-xs text-slate-500 mt-1">Manual de Ingeniería Civil</p>
+                </div>
+                <button id="close-sidebar" class="md:hidden text-slate-400 hover:text-slate-600 p-2 font-bold text-xl">
+                    ✕
+                </button>
             </div>
             
             <nav class="flex-1 overflow-y-auto p-4 custom-scrollbar">
                 <ul class="space-y-2">
                     {MENU_ITEMS.map(item => {
-                        // Verificamos si este módulo es el activo actualmente
                         const isActiveModule = currentPath.includes(`/wiki/${item.slug}`);
-                        
                         return (
                         <li>
                             <details class="group" open={isActiveModule}>
-                                {/* Título del Módulo (Click para desplegar) */}
                                 <summary class={`
                                     flex items-center justify-between cursor-pointer px-4 py-3 rounded-lg font-bold text-sm transition-all select-none
                                     ${isActiveModule ? 'bg-purple-50 text-purple-700' : 'text-slate-700 hover:bg-slate-100'}
@@ -82,19 +84,17 @@ const currentPath = Astro.url.pathname;
                                     <div class="flex items-center gap-2">
                                         {item.title}
                                     </div>
-                                    {/* Flechita animada con CSS */}
                                     <span class="transform transition-transform group-open:rotate-180 text-xs opacity-50">
                                         ▼
                                     </span>
                                 </summary>
 
-                                {/* Lista de Subtemas */}
                                 <ul class="mt-2 ml-4 space-y-1 border-l-2 border-slate-100 pl-2">
                                     {item.subitems.map(sub => (
                                         <li>
                                             <a 
                                                 href={`/wiki/${item.slug}${sub.anchor}`}
-                                                class="block px-4 py-2 text-xs font-medium text-slate-500 hover:text-purple-600 hover:bg-purple-50/50 rounded-md transition-colors"
+                                                class="block px-4 py-2 text-xs font-medium text-slate-500 hover:text-purple-600 hover:bg-purple-50/50 rounded-md transition-colors mobile-link"
                                             >
                                                 {sub.label}
                                             </a>
@@ -114,14 +114,24 @@ const currentPath = Astro.url.pathname;
             </div>
 		</aside>
 
-		<main class="flex-1 md:ml-80 min-h-screen flex flex-col">
+		<main class="flex-1 md:ml-80 min-h-screen flex flex-col w-full">
             
             <header class="md:hidden bg-white/90 backdrop-blur-md border-b border-slate-200 p-4 flex justify-between items-center sticky top-0 z-30 shadow-sm">
-                <span class="font-bold text-slate-900 flex items-center gap-2">VertexWiki</span>
-                <a href="/" class="text-xs bg-slate-900 text-white px-4 py-2 rounded-full font-bold">Menú</a>
+                
+                <button id="open-sidebar" class="text-slate-700 p-2 -ml-2 rounded-lg hover:bg-slate-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <span class="font-bold text-slate-900 text-sm">VertexWiki</span>
+                
+                <a href="/" class="text-xs bg-slate-900 text-white px-3 py-1.5 rounded-full font-bold">
+                    Salir
+                </a>
             </header>
 
-            <div class="max-w-4xl mx-auto w-full p-6 md:p-12 pb-24">
+            <div class="max-w-4xl mx-auto w-full p-6 md:p-12 pb-24 overflow-x-hidden">
 				<slot />
 			</div>
 		</main>
@@ -130,23 +140,46 @@ const currentPath = Astro.url.pathname;
 </html>
 
 <style>
-    /* Personalización de la barra de desplazamiento del menú */
-    .custom-scrollbar::-webkit-scrollbar {
-        width: 4px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background-color: #cbd5e1;
-        border-radius: 20px;
-    }
-    
-    /* Eliminar el triángulo por defecto de 'details' en algunos navegadores */
-    details > summary {
-        list-style: none;
-    }
-    details > summary::-webkit-details-marker {
-        display: none;
-    }
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
 </style>
+
+<script>
+    // Lógica para abrir/cerrar el menú en celular
+    const sidebar = document.getElementById('wiki-sidebar');
+    const openBtn = document.getElementById('open-sidebar');
+    const closeBtn = document.getElementById('close-sidebar');
+    const overlay = document.getElementById('mobile-overlay');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+        // Toggle Sidebar
+        sidebar.classList.toggle('-translate-x-full');
+        
+        // Toggle Overlay
+        if (overlay.classList.contains('hidden')) {
+            overlay.classList.remove('hidden');
+            setTimeout(() => overlay.classList.remove('opacity-0'), 10); // Fade in
+        } else {
+            overlay.classList.add('opacity-0'); // Fade out
+            setTimeout(() => overlay.classList.add('hidden'), 300);
+        }
+    }
+
+    // Event Listeners
+    if (openBtn) openBtn.addEventListener('click', toggleMenu);
+    if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+    if (overlay) overlay.addEventListener('click', toggleMenu);
+
+    // Cerrar menú al hacer clic en un enlace (para navegar)
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!sidebar.classList.contains('-translate-x-full')) {
+                toggleMenu();
+            }
+        });
+    });
+</script>
