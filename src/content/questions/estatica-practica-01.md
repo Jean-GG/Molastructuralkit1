@@ -1,7 +1,7 @@
 ---
 type: "practice"
 topic: "Estática"
-question: "VIDEO 1: EQUILIBRIO DE LA PARTÍCULA"
+question: "VIDEO: EQUILIBRIO DE LA PARTÍCULA"
 answerTitle: "Explicacion"
 videoId: "wNP2tRZvNBE"
 nextQuestionId: "estatica-practica-02"

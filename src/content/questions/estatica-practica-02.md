@@ -1,7 +1,7 @@
 ---
 type: "practice"
 topic: "Estática"
-question: "VIDEO 2: EQUILIBRIO DE CUERPO RÍGIDO"
+question: "VIDEO: EQUILIBRIO DE CUERPO RÍGIDO"
 answerTitle: "Explicacion"
 videoId: "oesCngifPcM"
 nextQuestionId: "estatica-practica-03"
